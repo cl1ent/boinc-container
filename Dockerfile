@@ -12,10 +12,8 @@ RUN apt-get update && apt-get install --yes --no-install-recommends --no-install
 
 User root
 
-EXPOSE 31416 80 443
-
 WORKDIR /var/lib/boinc-client
 
-ENTRYPOINT ["/usr/bin/boinc", "--allow_remote_gui_rpc", "--attach_project"]
-CMD ["www.worldcommunitygrid.org", "983535_e185433cff95d3c7a8a9d29926f3138a"]
+ENTRYPOINT ["/usr/bin/boinccmd", "--join_acct_mgr"]
+CMD ["https://www.grcpool.com", "username", "password"]
 
